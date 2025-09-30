@@ -1,0 +1,152 @@
+body{
+    margin: 0px;
+    background-color: bisque;
+}
+
+
+
+#div{
+    background-color: white;
+    color: rgb(8, 50, 93);
+    display: inline-block;
+    width: 1000px;
+    min-height: 230vh;
+    margin-top: 100px;
+    margin-left: 230px;
+    border-radius: 20px;
+    padding: 50px;
+
+}
+#title{
+    margin-top: -330px;
+    margin-left: 400px;
+    position: absolute;
+}
+img{
+    margin-left: 300px;
+    border-radius: 20px;
+}
+b{
+    font-size: x-large;
+    color: black;
+}
+#bs{
+    margin-left: -700px;
+    margin-top: 50px;
+}
+p{
+    font-size: large;
+    text-indent: 50px;
+    word-spacing: 5px;
+}
+#review{
+    margin-top: -10px;
+}
+#relese{
+    margin-top: -22px;
+    margin-left: 100px;
+}
+#reno{
+    margin-top: -22px;
+    margin-left: 120px;
+}
+#rate{
+    font-size: xx-large;
+    margin-top: -25px;
+    margin-left: 50px;
+}
+a{
+    text-decoration: none;
+    margin-left: 800px;
+    position: absolute;
+    margin-top: 300px;
+    color: black;
+}
+
+#comm_form{
+
+    position: absolute;
+    width: 500px;
+    border-radius: 10px;
+    background-color:bisque;
+    border-width: 1.5px;
+    border-bottom-style: dotted;
+    border-bottom-color: black;
+
+}
+
+#hrr{margin-top: 50px;
+visibility: hidden;}
+
+
+#comment{
+    position: absolute;
+    width: 500px;
+    border-radius: 10px;
+    margin-left: 520px;
+    height: 260px;
+    overflow-y: scroll;
+    background-color: bisque;
+    border-width: 1.5px;
+    border-bottom-style: dotted;
+    border-bottom-color: black;
+}
+
+.content::-webkit-scrollbar {
+            width: 12px;
+        }
+
+.content::-webkit-scrollbar-track{
+            background: rgb(250, 205, 149);
+        }
+.content::-webkit-scrollbar-thumb {
+            background: #1d3f17;
+        }
+
+.content::-webkit-scrollbar-thumb:hover {
+            background: #3f7c4a;
+        }
+
+#co_user_name{
+    margin-left: -45px;
+    /* margin-top: 1px; */
+    color: rgb(8, 50, 93);
+    position: absolute;
+}
+#inner_com{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 380px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+#co_command{
+    margin-left: -45px;
+    margin-top: -10px;
+    /* position: absolute; */
+    font-size: x-large;
+    padding-left: 35px;
+    display: inline-block;
+    min-height: 10px;
+}
+#co_rating{
+    margin-left: -50px;
+    margin-top: 22px;
+    position: absolute;
+    font-size: x-small;
+}
+
+#co_date{
+    margin-left: 200px;
+    margin-top: 22px;
+    position: absolute;
+    font-size: x-small;
+}
+#hr{
+    margin-top: 30px;
+}
+/* #gap{
+    height: 50px;
+    background-color: bisque;} */

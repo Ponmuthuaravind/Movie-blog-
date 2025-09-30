@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>{{ data.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/detail.css' %}">
+</head>
+<body>
+    <div id="div">
+    <img src="{{ data.poster.url }}" alt="{{ data.title }}" width="400" height="220px" />
+    <h1 id="title">{{ data.title }}</h1>
+    <b id="bs">Story :-</b><br>
+    <p id="story"> 
+        {{ data.story }}
+    </p>
+    <hr>
+    <b>Review :-</b> 
+    <p id="review">
+        <br>{{ data.review }}
+    </p>
+    <hr>
+    <b>Relesed on :-</b>
+    <p id="relese">
+        {{ data.relesed_on }}
+    </p>
+    <hr>
+    <b>Reviewed no :-</b>
+    <p id="reno">
+        {{ data.reviewed_on }}
+    </p>
+    <hr>
+    <b>Rating:- </b>
+    <p id="rate">
+        {{ data.rating }}/5
+    </p>
+    
+    <hr>
+    <hr id="hrr">
+    <div id="comm_form">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table>
+                {{form.as_table}}
+            </table>
+            <input type="submit" value="comment">
+        </form>
+    </div>
+
+    
+    <div id="comment" class="content">
+        {% for command in Comment %}
+        <p id="co_user_name">{{command.username}}</p>
+        <div id="inner_com">
+        <p id="co_command">{{command.Comment}}</p>
+        <p id="co_rating">Rating : {{command.rating}}</p>
+        <p id="co_date">Date: {{command.command_date}}</p>
+        </div>
+        <hr id="hr">
+        {% endfor %} 
+    </div>
+    
+    <p id="gap"></p>
+
+    <a href="{% url 'home' %}" id="back">← Back to Movie List</a>
+    </div>
+</body>
+</html>

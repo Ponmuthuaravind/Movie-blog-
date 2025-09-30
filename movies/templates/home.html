@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'css/logo.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+
+    <title>CineNest</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div id="bg">
+
+    </div>
+    <nav>
+        <img src="{% static 'asset/logo.png' %}" alt="" height="40px" width="40px">
+        <a href="#" id="cn">CineNest</a>
+        <a href="#" id="about">Kollywood</a>
+        <a href="#" id="about1">Mollywood</a>
+        <a href="#" id="about2">Sandalwood</a>
+        <a href="#" id="about3">Bollywood</a>
+        <a href="#" id="about4">Tollywood</a>
+        <a href="#" id="about5">Hollywood</a>
+        <a href="#" id="movie">Movielist</a>
+    </nav>
+
+   {% for data in data %}
+   <section>
+    <div id="card">
+        <img src="{{ data.poster.url }}" alt="{{ data.title }}" width="300" height="220px" />
+        <h2 id="title">{{ data.title }}</h2>
+        <p id="story">{{ data.story|truncatewords:50 }}</p>
+        <a href="{% url 'movie_detail' data.id %}" id="read">Read More</a>
+    </div>
+   </section>
+  <hr>
+{% endfor %}
+
+
+</body>
+</html>
